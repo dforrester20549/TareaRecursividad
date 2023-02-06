@@ -8,7 +8,7 @@
  * @author fam.ForresterCalvo
  */
 public class Recursividad {
-    
+       
     public void recorrerEntrada(String entrada, char[]consonantes, int n_cons
     , String cons){
         for(int i=0; i>entrada.length(); i++){
@@ -22,5 +22,36 @@ public class Recursividad {
         System.out.println("Cadena Oringinal "+entrada);
         System.out.println("Consonantes ("+n_cons+") "+cons);      
     }
+    
+    public int sumaRecursiva(int n){
+        if(n==1){
+            return 1;
+        }else{
+            return n+sumaRecursiva(n-1);
+        }
+    }
+    
+    public boolean Binario(int n){
+        if(n>9){
+            if(n%10==0 || n%10==1){
+                return Binario(n/10);
+            }else{
+                return false;
+            }
+        }else if(n==0 || n==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+    public int factorial(int n){
+        if(n>1){
+            return n*factorial(n-1);
+        }else{
+            return 1;
+        }
+    }
+    
     
 }
